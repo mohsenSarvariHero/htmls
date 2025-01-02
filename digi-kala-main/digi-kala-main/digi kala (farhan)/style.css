@@ -1,0 +1,514 @@
+:root {
+    --font-family: system-ui;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    & * {
+        box-sizing: border-box;
+        font-family: var(--font-family);
+        list-style-type: none;
+    }
+}
+
+
+main .section-offer, main .section-popular{
+    background-color: #fff;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+}
+
+main .section-offer .header, main .section-popular .header {
+    padding-bottom: 40px;
+}
+
+main .section-offer .header .header-name, main .section-popular .header .header-name {
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+main .section-offer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .section-offer .container .items {
+    /*margin: 5px;*/
+    border-right: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+
+main .section-offer .container .items .img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile: 2 images per row */
+@media (max-width: 767px) {
+    main .section-offer .container .items {
+        width: calc(50% - 10px); /* 2 images per row */
+        padding: 20px 5px;
+    }
+    main .section-offer .container .items .price-orginal {
+        font-size: .4em;
+    }
+    main .section-offer .container .items .item-card .price {
+        font-size: .5em;
+    }
+    main .section-offer .container .items .item-card .off {
+        font-size: .4em;
+    }
+    main .section-offer .header .header-name, main .section-popular .header .header-name {
+        font-size: 1em;
+    }
+    main .section-offer, main .section-popular {
+        width: 100%;
+    }
+    main .section-read .card {
+        flex-direction: column;
+    }
+    main .section-read .title a {
+        font-size: .8em;
+    }
+    footer section .right {
+        display: none;
+    }
+    footer section .left {
+        margin: 0 auto;
+    }
+    footer .cards .card {
+        display: none;
+    }
+    footer .options #content {
+        display: none;
+    }
+    footer .app-digi-kala .container {
+        background-color: white;
+    }
+    footer .app-digi-kala .container img {
+        width: 50px;
+    }
+    footer .options {
+        display: none;
+    }
+}
+
+/* Tablet: 5 images per row */
+@media (min-width: 768px) and (max-width: 1439px) {
+    main .section-offer .container .items {
+        width: calc(20% - 10px); /* 5 images per row */
+        padding: 15px 2px;
+    }
+
+    main .section-offer .container .items .price-orginal {
+        font-size: .5em;
+    }
+    main .section-offer .container .items .item-card .price {
+        font-size: .5em;
+    }
+    main .section-offer .container .items .item-card .off {
+        font-size: .3em;
+    }
+    main .section-offer .header .header-name, main .section-popular .header .header-name {
+        font-size: 1.1em;
+    }
+    main .section-read .card {
+        flex-direction: column;
+    }
+    main .section-read .title a {
+        font-size: 1em;
+    }
+    footer section .right {
+        display: none;
+    }
+    footer section .left {
+        margin: 0 auto;
+    }
+    footer .cards .card{
+        display: none;
+    }
+    footer .options #content {
+        display: none;
+    }
+    footer .options {
+        display: none;
+    }
+}
+
+/* Laptop: 6 images per row for screens wider than 1440px */
+@media (min-width: 1440px) {
+    main .section-offer .container .items {
+        width: calc(16.66% - 10px); /* 6 images per row */
+        padding: 15px;
+    }
+    main .section-offer .container .items .price-orginal {
+        font-size: 1.1em;
+    }
+    main .section-offer .container .items .item-card .price {
+        font-size: 1.2em;
+    }
+    main .section-offer .container .items .item-card .off {
+        font-size: 1.2em;
+    }
+    main .section-offer .header .header-name, main .section-popular .header .header-name {
+        font-size: 2em;
+    }
+    main .section-read .title a {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (width: 1440px) {
+    main .section-offer .container .items .price-orginal {
+        font-size: .8em;
+    }
+    main .section-offer .container .items .item-card .price {
+        font-size: .8em;
+    }
+    main .section-offer .container .items .item-card .off {
+        font-size: .5em;
+    }
+    main .section-read .title a {
+        font-size: 1em;
+    }
+}
+
+main .section-offer .container .items .item-card {
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-between;
+    text-align: center;
+}
+
+main .section-offer .container .items .item-card .off {
+    background-color: crimson;
+    padding: 3px 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+main .section-offer .container .items .item-card .price::after {
+    content: 'تومان';
+    margin-right: 3px;
+}
+
+main .section-offer .container .items .item-card .price {
+    color: rgb(53, 53, 53);   
+    font-weight: 600;
+}
+
+main .section-offer .container .items .price-orginal {
+    text-align: left;
+    color: #acacac;
+    text-decoration: line-through;
+}
+
+
+/* section popular */
+
+
+
+main .section-popular article .num {
+    padding: 15px;
+    color: deepskyblue;
+    font-size: 1.1em;
+}
+
+
+main .section-popular .container-popular {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+main .section-popular .container-popular .scroll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-flow: column;
+}
+
+
+main .section-popular .container-popular .scroll article {
+    min-width: 350px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+}
+
+
+main .section-popular .container-popular .scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scrollbar-width: thin; /* ! */
+    scrollbar-color: #414040 transparent; /* ! */
+}
+
+
+
+main .section-popular .container-popular .scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+main .section-popular .container-popular .scroll::-webkit-scrollbar-thumb {
+    background-color: #414040;
+}
+
+
+
+main .section-popular .container-popular .scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+main .section-read {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+
+main .section-popular article .image img {
+    max-width: 80%;
+}
+
+.content {
+    font-size: 1em;
+    font-weight: 500;
+    color: #414040;
+}
+
+main .section-read .title{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    align-items: center;
+}
+
+main .section-read .title .name {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 600;
+
+}
+
+main .section-read .card {
+    display: flex;
+    gap: 20px;
+}
+
+
+main .section-read .card article {
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+}
+
+main .section-read .card .img img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+main .section-read .card article .content {
+    color: #414040;
+    padding: 30px;
+    font-size: 1.3em;
+}
+
+main .section-read .title a {
+    color: darkturquoise;
+    
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+footer section .right .content ul {
+    display: flex;
+    gap: 20px;
+}
+
+
+footer section .right .content ul li {
+    font-size: 1.1em;
+}
+
+.space {
+    color: #acacac;
+}
+
+
+footer section .left a {
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    padding: 10px 20px ;
+    color: #acacac;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+footer .cards {
+    display: flex;
+    padding: 0 100px;
+    border: none;
+}
+
+footer .cards .container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+footer .cards .card .img {
+    width: 100px;
+}
+
+footer .cards .card .img img {
+    width: 100%;
+}
+
+
+footer .options  {
+    border: none;
+}
+
+footer .options .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+footer .options .container .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .options .container .content .header {
+    color: #414040;
+    font-size: 1.4em;
+}
+
+footer .options .container .content .main {
+    color: #acacac;
+    font-size: 1.3em;
+
+}
+
+footer .options .container .content .main ul li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+
+
+
+footer .options .container .content .main .ul {
+    color: #acacac;
+    display: flex;
+    gap: 50px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+footer .options .container .content .main .email h3 {
+    color: #414040;
+}
+
+footer .options .container .content .main .email input {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    width: 70%;
+    border: none;
+    margin-left: 10px;
+}
+
+::placeholder {
+    font-size: 2em;
+    color: #acacac;
+}
+
+footer .options .container .content .main .email button {
+    padding: 20px;
+    border: none;
+    background-color: #acacac;
+    color: #f3f3f3;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    
+}
+
+
+footer .app-digi-kala {
+    border: none;
+}
+
+footer .app-digi-kala .container {
+ 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+footer .app-digi-kala .container img {
+   
+}
+
+
+footer .app-digi-kala .container .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.1em;
+    color: #000;
+}
+
+footer .app-digi-kala .container .left button {
+    color: rgb(40, 35, 75);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
